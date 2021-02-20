@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tms\V20200713\Models;
+namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBizType() 获取您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
  * @method void setBizType(string $BizType) 设置您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
- * @method integer getEvilFlag() 获取数据是否属于恶意类型。
- 0：正常 1：可疑
- * @method void setEvilFlag(integer $EvilFlag) 设置数据是否属于恶意类型。
- 0：正常 1：可疑
  * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
  * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
  * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
@@ -71,14 +67,8 @@ class TextModerationResponse extends AbstractModel
     public $BizType;
 
     /**
-     * @var integer 数据是否属于恶意类型。
- 0：正常 1：可疑
-     */
-    public $EvilFlag;
-
-    /**
      * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -132,10 +122,8 @@ class TextModerationResponse extends AbstractModel
 
     /**
      * @param string $BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
-     * @param integer $EvilFlag 数据是否属于恶意类型。
- 0：正常 1：可疑
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      * @param array $Keywords 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
@@ -168,10 +156,6 @@ class TextModerationResponse extends AbstractModel
         }
         if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
             $this->BizType = $param["BizType"];
-        }
-
-        if (array_key_exists("EvilFlag",$param) and $param["EvilFlag"] !== null) {
-            $this->EvilFlag = $param["EvilFlag"];
         }
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {

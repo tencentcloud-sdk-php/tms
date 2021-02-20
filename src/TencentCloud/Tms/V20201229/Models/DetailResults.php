@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tms\V20200713\Models;
+namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
  * 文本返回的详细结果
  *
  * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
  * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
  * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,7 +55,7 @@ class DetailResults extends AbstractModel
 {
     /**
      * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
@@ -98,7 +98,7 @@ class DetailResults extends AbstractModel
 
     /**
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。

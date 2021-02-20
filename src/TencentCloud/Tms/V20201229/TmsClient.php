@@ -15,17 +15,14 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Tms\V20200713;
+namespace TencentCloud\Tms\V20201229;
 
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tms\V20200713\Models as Models;
+use TencentCloud\Tms\V20201229\Models as Models;
 
 /**
- * @method Models\AccountTipoffAccessResponse AccountTipoffAccess(Models\AccountTipoffAccessRequest $req) 举报恶意账号
- * @method Models\DescribeTextLibResponse DescribeTextLib(Models\DescribeTextLibRequest $req) 控制台获取用户词库列表
- * @method Models\DescribeTextStatResponse DescribeTextStat(Models\DescribeTextStatRequest $req) 控制台识别统计
  * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别可能令人反感、不安全或不适宜的文本内容，同时支持用户配置词库黑白名单，打击自定义识别类型的图片。
  */
 
@@ -44,7 +41,7 @@ class TmsClient extends AbstractClient
     /**
      * @var string
      */
-    protected $version = "2020-07-13";
+    protected $version = "2020-12-29";
 
     /**
      * @param Credential $credential
@@ -59,7 +56,7 @@ class TmsClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("tms")."\\"."V20200713\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("tms")."\\"."V20201229\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;
